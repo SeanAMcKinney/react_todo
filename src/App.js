@@ -10,21 +10,26 @@ import Login from "./Components/Login/Login";
 import Categories from "./Components/Categories/Categories";
 import Todos from "./Components/Todos/Todos";
 import NotFound from "./Components/NotFound";
+import AuthProvider from "./contexts/AuthContext";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        {/* The Browser Router is aliased as Router,. We surround Navigation because it has Link components that work with the BrowserRouter component. This comes from react-router-dom's docs */}
-        <Navigation />
-        {/*For every route we want to render a portion of our site for, we will create a Route component. It connects the url path wih a specific component to render  */}
-        <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="categories" element={<Categories />} />
-          <Route path="todos" element={<Todos />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Router>
+      <AuthProvider>
+        <Router>
+          {/* The Browser Router is aliased as Router,. We surround Navigation because it has Link components that work with the BrowserRouter component. This comes from react-router-dom's docs */}
+          <Navigation />
+          {/*For every route we want to render a portion of our site for, we will create a Route component. It connects the url path wih a specific component to render  */}
+          <Routes>
+            <Route path="/" element={<Login />} />
+            <Route path="categories" element={<Categories />} />
+            <Route path="todos" element={<Todos />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+          <Footer />
+        </Router>
+      </AuthProvider>
     </div>
   );
 }
