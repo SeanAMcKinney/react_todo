@@ -12,6 +12,7 @@ import Todos from "./Components/Todos/Todos";
 import NotFound from "./Components/NotFound";
 import AuthProvider from "./contexts/AuthContext";
 import Footer from "./Components/Footer";
+import ProtectedRoute from "./Components/ProtectedRoute";
 
 function App() {
   return (
@@ -23,8 +24,9 @@ function App() {
           {/*For every route we want to render a portion of our site for, we will create a Route component. It connects the url path wih a specific component to render  */}
           <Routes>
             <Route path="/" element={<Login />} />
-            <Route path="categories" element={<Categories />} />
-            <Route path="todos" element={<Todos />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="categories" element={<ProtectedRoute><Categories /></ProtectedRoute>} />
+            <Route path="todos" element={<ProtectedRoute><Todos /></ProtectedRoute>} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />
