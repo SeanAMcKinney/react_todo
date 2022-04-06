@@ -8,11 +8,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Login from "./Components/Login/Login";
 import Categories from "./Components/Categories/Categories";
-import Todos from "./Components/Todos/Todos";
 import NotFound from "./Components/NotFound";
 import AuthProvider from "./contexts/AuthContext";
 import Footer from "./Components/Footer";
 import ProtectedRoute from "./Components/ProtectedRoute";
+import GroceryItmes from "./Components/GroceryItems/GroceryItmes";
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
             <Route path="/" element={<ProtectedRoute><Login /></ProtectedRoute>} />
             <Route path="/login" element={<Login />} />
             <Route path="categories" element={<ProtectedRoute><Categories /></ProtectedRoute>} />
-            <Route path="todos" element={<ProtectedRoute><Todos /></ProtectedRoute>} />
+            <Route path="groceryItems" element={<ProtectedRoute><GroceryItmes /></ProtectedRoute>} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />

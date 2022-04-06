@@ -11,7 +11,7 @@ export default function Login() {
   return currentUser ? <Navigate to='/categories' /> :
     <div className='login'>
         <article className='bg-info mb-5 p-5 text-dark'>
-            <h1 className="text-center">Welcome Todo!</h1>
+            <h1 className="text-center">Grocery List</h1>
         </article>
         <Container>
             <Card className='m-2 border-dark- text-center'>

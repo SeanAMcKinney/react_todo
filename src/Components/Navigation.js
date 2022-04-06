@@ -17,8 +17,8 @@ export default function Navigation() {
           <Link to="/categories" className="nav-link">
             Categories
           </Link>
-          <Link to="/todos" className="nav-link">
-            Todos
+          <Link to="/groceryItems" className="nav-link">
+            Grocery Items
           </Link>
           {currentUser ? (
             <Nav.Link onClick={() => logout()}>Logout</Nav.Link>
