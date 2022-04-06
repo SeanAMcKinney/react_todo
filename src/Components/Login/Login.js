@@ -13,7 +13,7 @@ export default function Login() {
         //await keyword to pause any more code from executing until we get the response back from Firebase
         await login();
         //utilizes react-router-dom functionality to redirect the user to resources
-        return navigate("/resources");
+        return navigate("categories");
     }
 
   return (

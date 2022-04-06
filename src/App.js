@@ -20,10 +20,9 @@ function App() {
       <AuthProvider>
         <Router>
           {/* The Browser Router is aliased as Router,. We surround Navigation because it has Link components that work with the BrowserRouter component. This comes from react-router-dom's docs */}
-          <Navigation />
-          {/*For every route we want to render a portion of our site for, we will create a Route component. It connects the url path wih a specific component to render  */}
+          <Navigation />          
           <Routes>
-            <Route path="/" element={<Login />} />
+            <Route path="/" element={<ProtectedRoute><Login /></ProtectedRoute>} />
             <Route path="/login" element={<Login />} />
             <Route path="categories" element={<ProtectedRoute><Categories /></ProtectedRoute>} />
             <Route path="todos" element={<ProtectedRoute><Todos /></ProtectedRoute>} />
