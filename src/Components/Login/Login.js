@@ -2,21 +2,13 @@ import React from 'react'
 //Step 1 - accessing user info - import useAuth
 import { useAuth } from '../../contexts/AuthContext'
 import { Container, Card } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 
 export default function Login() {
     //Step 2 - create a variable to hold the currentUser, login, logout
-    const {login} = useAuth();
-    const navigate = useNavigate(0);
-
-    async function handleAuth(){
-        //await keyword to pause any more code from executing until we get the response back from Firebase
-        await login();
-        //utilizes react-router-dom functionality to redirect the user to resources
-        return navigate("/categories");
-    }
-
-  return (
+    const {login, currentUser} = useAuth();
+    
+  return currentUser ? <Navigate to='/categories' /> :
     <div className='login'>
         <article className='bg-info mb-5 p-5 text-dark'>
             <h1 className="text-center">Welcome Todo!</h1>
@@ -28,12 +20,11 @@ export default function Login() {
                 </Card.Header>
                 <Card.Body>
                     {/* Step 3 - call the functionality in the UI or use it in the logic portion of the component */}
-                    <button onClick={() => handleAuth()} className='btn btn-dark'>
+                    <button onClick={login} className='btn btn-dark'>
                         Login with GitHub
                     </button>
                 </Card.Body>
             </Card>
         </Container>
     </div>
-  )
 }
