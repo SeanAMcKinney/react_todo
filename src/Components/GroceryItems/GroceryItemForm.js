@@ -26,7 +26,7 @@ export default function GroceryItemForm(props) {
           };
           axios.post('http://localhost:56020/api/GroceryItem/', groceryItemToCreate).then(() => {
               props.getGroceryItems();
-              props.getShowCreate(false);
+              props.setShowCreate(false);
           });
       }
       else

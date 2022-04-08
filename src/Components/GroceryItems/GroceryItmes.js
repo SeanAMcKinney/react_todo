@@ -49,7 +49,7 @@ const { currentUser } = useAuth();
           <div className="createContainer">
             {showCreate && 
               <GroceryItemCreate 
-              getResources={getGroceryItems}
+              getGroceryItems={getGroceryItems}
               setShowCreate={setShowCreate}
               />
             }
