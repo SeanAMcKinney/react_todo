@@ -22,15 +22,15 @@ const deleteGroceryItem = (id) => {
 }
 
   return (
-    <div className="singleGroceryItem col-md-5 m-4">
+    <div className="singleResource col-md-5 m-4">
 
       {currentUser === process.env.REACT_APP_EMAIL_ADMIN &&
         <div>
           <button id='editLink' onClick={() => setShowEdit(true)}>
-            <FontAwesomeIcon icon={'fas', 'edit'} />
+            <FontAwesomeIcon icon={['fas', 'edit']} />
           </button>
           <button id="deleteLink" onClick={() => deleteGroceryItem(props.groceryItem.GroceryItemId)}>
-            <FontAwesomeIcon icon={'fas', 'trash-alt'} />
+            <FontAwesomeIcon icon={['fas', 'trash-alt']} />
           </button>
           {showEdit &&
           <GroceryItemEdit

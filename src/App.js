@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 //Components to import
 
+
 import Login from "./Components/Login/Login";
 import Categories from "./Components/Categories/Categories";
 import NotFound from "./Components/NotFound";
