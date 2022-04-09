@@ -52,7 +52,10 @@ export default function Categories() {
         <table className="table bg-info table-dark mt-3 mb-3">
           <thead className="table-secondary text-uppercase">
             <tr>
-              <th>Department</th>                         
+              <th>Department</th> 
+              {currentUser.email === process.env.REACT_APP_EMAIL_ADMIN &&
+                <th>Actions</th>
+              }                        
             </tr>
           </thead>
           <tbody>
@@ -60,7 +63,9 @@ export default function Categories() {
             {categories.map((x) => (
               <SingleCategory 
               key={x.CategoryId} 
-              category={x} />
+              category={x}
+              getCategories={getCategories}
+              />
             ))}
           </tbody>
         </table>
