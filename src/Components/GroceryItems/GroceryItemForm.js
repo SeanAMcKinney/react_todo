@@ -31,7 +31,16 @@ export default function GroceryItemForm(props) {
       }
       else
       {
-          console.log('edit mode')
+          const groceryItemToEdit = {
+            GroceryItmeId: props.groceryItem.GroceryItmeId,
+            Name: values.Name,
+            Description: values.Description,
+            CategoryId: values.CategoryId
+          }
+          axios.put('http://localhost:56020/api/GroceryItem/', groceryItemToEdit).then(() => {
+            props.setGroceryItems()
+            props.setShowEdit(false)
+          })
       }
   };
 

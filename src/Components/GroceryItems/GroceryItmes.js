@@ -62,7 +62,8 @@ const { currentUser } = useAuth();
           {groceryItems.map((x) => (
             <SingleGroceryItem
               key={x.GroceryItemId}
-              groceryItem={x} />
+              groceryItem={x} 
+              getGroceryItems={getGroceryItems}/>
           ))}
         </article>
       </Container>
