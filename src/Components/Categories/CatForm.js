@@ -17,10 +17,9 @@ export default function CatForm(props) {
         })
     } else {
       const catToEdit = {
-        DepartmentName: values.DepartmentName,
+        DepartmentName: values.DepartmentName
       }
-      axios.put("http://localhost:56020/api/categories/", catToEdit).then(
-        () => {
+      axios.put("http://localhost:56020/api/categories/", catToEdit).then(() => {
           props.getCategories();
           props.setShowEdit(false);
         })
