@@ -1,6 +1,7 @@
 import React from 'react'
 import Logout from './Login/Logout'
 import { useAuth } from '../contexts/AuthContext'
+import '../Components/Footer.css'
 
 
 export default function Footer() {

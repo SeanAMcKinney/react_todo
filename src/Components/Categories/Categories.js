@@ -5,6 +5,7 @@ import axios from 'axios'
 import SingleCategory from './SingleCategory'
 import { useAuth } from '../../contexts/AuthContext'
 import CatCreate from './CatCreate'
+import background from '../../images/CategoriesDashboardPic.jpg'
 
 export default function Categories() {
     //Step 2 - CategoriesRead
@@ -25,9 +26,9 @@ export default function Categories() {
     getCategories();
   }, []); 
   return (
-    <section className="categories">
+    <section className="categories" style={{ backgroundImage: `url(${background})`}}>
       <article className="bg-info p-5">
-        <h1 className="text-center">Grocery Departments Dashboard</h1>
+        <h1 className="text-center text-white">Grocery Departments Dashboard</h1>
       </article>
       {currentUser.email === process.env.REACT_APP_EMAIL_ADMIN && 
         <div className="bg-dark p-2 mb-3 text-center">
