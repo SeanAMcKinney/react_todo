@@ -9,7 +9,7 @@ import { useAuth } from "../contexts/AuthContext";
 export default function Navigation() {
   const { currentUser, login, logout } = useAuth();
   return (
-    <Navbar variant="dark" bg="dark" expand="md" className="p-3">
+    <Navbar variant="dark" bg="" expand="md" className="p-3">
       <Navbar.Brand href="/">Todo App</Navbar.Brand>
       <Navbar.Toggle />
       <Navbar.Collapse className="justify-content-end">

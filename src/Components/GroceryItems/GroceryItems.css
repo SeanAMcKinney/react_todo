@@ -1,22 +1,21 @@
-section.resources {
-    background-image: url('../../images/background.jpg');
+section.resources { 
     background-size: 100%;
     background-position: bottom;
-    background-color: black;
 }
 section.resources {
-    background-image: url('../../images/background.jpg');
     background-size: 100%;
     background-position: bottom;
-    background-color: black;
 }
 section.resources article.resourceGallery {
         padding: 2em 0 4em;
         width: 100%;
 }
+.section {
+
+}
 
 article.resourceGallery div.singleResource {
-    border: 2px solid #212529;
+    border: 2px solid #ffffff;
     text-align: center;
     position: relative; 
     padding: 0 0 2em;
@@ -28,9 +27,9 @@ article.resourceGallery div.singleResource {
 
 div.singleResource h3 {
     padding: .5em 0;
-    background-color:rgb(23,162, 184);
-    border-bottom: 4px solid #212529;
-    color: #212529;
+    background-color: rgba(7, 90, 15, 0.899);
+    border-bottom: 4px solid #ffffff;
+    color: #ffffff;
 }   
 
 div.singleResource p {
@@ -76,7 +75,7 @@ div.singleResource p {
 button#deleteLink:hover, button#editLink:hover {
     background-color:rgba(200,200,200, .95);
     color: rgb(144, 45, 20);
-    border: 2px solid rgb(144, 45, 20);
+    border: 1px solid rgb(144, 45, 20);
 }
 
 
@@ -96,3 +95,27 @@ article.resourceGallery h2.alert {
     height: 3.5em;
 }
 
+.gi1, h1, .singleResource, button {
+    text-shadow: -1px 1px 0 #000,
+				  1px 1px 0 #000,
+				 1px -1px 0 #000,
+				-1px -1px 0 #000;
+}
+
+.singleResource, button {
+    color: white;  
+}
+
+button.gi1:hover {
+    text-shadow: -1px 1px 0 white,
+				  1px 1px 0 white,
+				 1px -1px 0 white,
+				-1px -1px 0 white;
+}
+
+button.gi2:hover {
+    text-shadow: -1px 1px 0 #000,
+				  1px 1px 0 #000,
+				 1px -1px 0 #000,
+				-1px -1px 0 #000;
+}

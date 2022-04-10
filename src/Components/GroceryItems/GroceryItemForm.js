@@ -91,7 +91,7 @@ export default function GroceryItemForm(props) {
             </Field>
           </div>
           <div className="form-group m-3">
-            <button type="submit" className="btn btn-info m-3">
+            <button type="submit" className="btn btn-success m-3 gi1 gi2">
               Submit Grocery Item to API
             </button>
           </div>

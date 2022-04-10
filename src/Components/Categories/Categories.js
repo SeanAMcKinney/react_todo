@@ -27,14 +27,14 @@ export default function Categories() {
   }, []); 
   return (
     <section className="categories" style={{ backgroundImage: `url(${background})`}}>
-      <article className="bg-info p-5">
+      <article className="p-5">
         <h1 className="text-center text-white">Grocery Departments Dashboard</h1>
       </article>
       {currentUser.email === process.env.REACT_APP_EMAIL_ADMIN && 
-        <div className="bg-dark p-2 mb-3 text-center">
+        <div className="p-2 mb-3 text-center">
           {showCreate ? 
             <>
-              <button onClick={() => setShowCreate(false)} className='btn btn-warning'>
+              <button onClick={() => setShowCreate(false)} className='btn btn-warning s2'>
                 Cancel
               </button>
               {/* Step 6 - CatCreate - Render the CatCreate*/}
@@ -43,15 +43,15 @@ export default function Categories() {
                 getCategories={getCategories}
               />
             </> :
-            <button onClick={() => setShowCreate(true)} className='btn btn-info'>
+            <button onClick={() => setShowCreate(true)} className='btn btn-outline-light s1'>
               Create New Category
             </button>
           }
         </div>
       }
       <Container>
-        <table className="table bg-info table-dark mt-3 mb-3">
-          <thead className="table-secondary text-uppercase">
+        <table className="table table-dark mt-5 mb-3">
+          <thead className="table-color text-uppercase">
             <tr>
               <th>Department</th> 
               {currentUser.email === process.env.REACT_APP_EMAIL_ADMIN &&
@@ -59,7 +59,7 @@ export default function Categories() {
               }                        
             </tr>
           </thead>
-          <tbody>
+          <tbody className="">
             {/* Step 5 CategoriesRead - Map the categories to the SingleCategory component */}
             {categories.map((x) => (
               <SingleCategory 

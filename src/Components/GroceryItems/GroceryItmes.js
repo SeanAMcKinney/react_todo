@@ -5,6 +5,7 @@ import axios from "axios";
 import SingleGroceryItem from "./SingleGroceryItem";
 import GroceryItemCreate from "./GroceryItemCreate";
 import { useAuth } from "../../contexts/AuthContext";
+import background3 from '../../images/groceryitembackground.jpg'
 
 export default function GroceryItems() {
   const [groceryItems, setGroceryItems] = useState([]);
@@ -25,15 +26,15 @@ export default function GroceryItems() {
     getGroceryItems();
   }, []); 
   return (
-    <section className="resources">
-      <article className="bg-info p-5">
-        <h1 className="text-center">Grocery Items</h1>
+    <section className="resources" style={{ backgroundImage: `url(${background3})`}}>
+      <article className=" p-5">
+        <h1 className="text-center text-white">Grocery Items</h1>
       </article>
 
       {currentUser.email === process.env.REACT_APP_EMAIL_ADMIN && (
-        <div className="bg-dark p-2 mb-3 text-center">
+        <div className="p-2 mb-3 text-center">
           <button
-            className="btn btn-info"
+            className="btn btn-color btn-outline-light gi1"
             onClick={() => setShowCreate(!showCreate)}
           >
             {!showCreate ? "Create New Grocery Item" : "Close Form"}

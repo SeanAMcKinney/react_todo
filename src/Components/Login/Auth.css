@@ -9,3 +9,12 @@ span.profile img {
     margin: 0 10px;
     border: 1px solid white;
 }
+
+button {
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+div.login {
+    background-size: cover;
+}

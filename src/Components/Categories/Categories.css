@@ -1,5 +1,50 @@
 section.categories {
-    background-color: rgb(200,200,200);
+    background-color: rgba(200,200,200, 0);
     font-weight: bold;
+    text-shadow: -1px 1px 0 #000,
+				  1px 1px 0 #000,
+				 1px -1px 0 #000,
+				-1px -1px 0 #000;
+}
+
+tbody, td, tfoot, th, thead, tr  {
+    background: none !important;
+    background-color: none;
+    border-color: white !important;
+}
+
+div.container {
+    width: 40%;
+}
+
+ table {
+    border-radius: 10px 10px 0 0;
+    background-color: none !important;
+}
+
+.bg-info {
+    opacity: none;
+    background-color: none !important;
+}
+
+.s1 {
+    text-shadow: -1px 1px 0 #000,
+				  1px 1px 0 #000,
+				 1px -1px 0 #000,
+				-1px -1px 0 #000;
+}
+
+button.s1:hover {
+    text-shadow: -1px 1px 0 white,
+				  1px 1px 0 white,
+				 1px -1px 0 white,
+				-1px -1px 0 white;
+}
+
+.s2 {
+    text-shadow: -1px 1px 0 white,
+    1px 1px 0 white,
+   1px -1px 0 white,
+  -1px -1px 0 white;
 }
 

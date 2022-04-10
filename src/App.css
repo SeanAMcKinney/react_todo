@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: black;
+  background-color: rgba(7, 90, 15, 0.899) !important;
 }
 
 .App-logo {
@@ -15,7 +15,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: rgba(7, 90, 15, 0.899) !important;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -36,4 +36,19 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* div, nav, a {
+  background-color: rgba(23, 193, 40, 0.323) !important;
+} */
+
+div.root {
+  background-color: rgba(7, 90, 15, 0.899) !important;
+}
+
+section, article, div {
+  background-color: rgba(7, 90, 15, 2%) !important;
+}
+.bg-info {
+  background-color: none;
 }

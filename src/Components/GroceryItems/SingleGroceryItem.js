@@ -22,7 +22,7 @@ const deleteGroceryItem = (id) => {
 }
 
   return (
-    <div className="singleResource col-md-5 m-4">
+    <div className="singleResource col-md-5 m-2">
 
       {currentUser === process.env.REACT_APP_EMAIL_ADMIN &&
         <div>
@@ -45,9 +45,9 @@ const deleteGroceryItem = (id) => {
       <h3>{props.groceryItem.Name}</h3>
       {props.groceryItem.Description !== null ? (
         <p>{props.groceryItem.Description}</p>
-      ) : (
+      ) : 
         <p>No Description Provided</p>
-      )}
+      }
     </div>
   );
 }
