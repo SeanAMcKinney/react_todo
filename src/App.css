@@ -1,3 +1,7 @@
+html {
+  background-color: rgba(7, 90, 15, 0.899) !important;
+}
+
 .App {
   text-align: center;
   background-color: rgba(7, 90, 15, 0.899) !important;

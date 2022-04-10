@@ -60,7 +60,7 @@ export default function Categories() {
             </tr>
           </thead>
           <tbody className="">
-            {/* Step 5 CategoriesRead - Map the categories to the SingleCategory component */}
+           
             {categories.map((x) => (
               <SingleCategory 
               key={x.CategoryId} 

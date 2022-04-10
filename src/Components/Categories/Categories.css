@@ -9,7 +9,6 @@ section.categories {
 
 tbody, td, tfoot, th, thead, tr  {
     background: none !important;
-    background-color: none;
     border-color: white !important;
 }
 

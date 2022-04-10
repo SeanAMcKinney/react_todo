@@ -21,7 +21,7 @@ export default function Login() {
                 </Card.Header>
                 <Card.Body>
                     {/* Step 3 - call the functionality in the UI or use it in the logic portion of the component */}
-                    <button onClick={login} className='btn btn-outline-light btn-dark'>
+                    <button onClick={login} className='btn btn-outline-light btn-dark gitHub-login'>
                         Login with GitHub
                     </button>
                 </Card.Body>

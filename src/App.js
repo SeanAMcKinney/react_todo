@@ -13,7 +13,7 @@ import NotFound from "./Components/NotFound";
 import AuthProvider from "./contexts/AuthContext";
 import Footer from "./Components/Footer";
 import ProtectedRoute from "./Components/ProtectedRoute";
-import GroceryItems from './Components/GroceryItems/GroceryItmes'
+import GroceryItems from './Components/GroceryItems/GroceryItems'
 
 function App() {
   return (
