@@ -34,7 +34,7 @@ export default function GroceryItemForm(props) {
             CategoryId: values.CategoryId
           }
           axios.put('http://localhost:56020/api/GroceryItem/', groceryItemToEdit).then(() => {
-            props.setGroceryItems()
+            props.getGroceryItems()
             props.setShowEdit(false)
           })
       }
@@ -48,7 +48,7 @@ export default function GroceryItemForm(props) {
     <Formik
       initialValues={{       
         Name: props.groceryItem ? props.groceryItem.Name : "",
-        Description: props.groceryItem ? props.GroceryItemSchema.Description : "",
+        Description: props.groceryItem ? props.groceryItem.Description : "",
         CategoryId: props.groceryItem ? props.groceryItem.CategoryId : "",
       }}
       validationSchema={groceryItemSchema}
@@ -92,7 +92,7 @@ export default function GroceryItemForm(props) {
           </div>
           <div className="form-group m-3">
             <button type="submit" className="btn btn-success m-3 gi1 gi2">
-              Submit Grocery Item to API
+              Submit New Grocery Item
             </button>
           </div>
         </Form>

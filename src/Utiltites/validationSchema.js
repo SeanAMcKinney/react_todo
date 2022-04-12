@@ -10,7 +10,7 @@ const catSchema = Yup.object().shape({
 
 const groceryItemSchema = Yup.object().shape({
   Name: Yup.string().max(25, "Max 25 Characters").required(),
-  Description: Yup.string().max(100, "Max 100 Characters"),
+  Description: Yup.string().nullable(true).max(100, "Max 100 Characters"),
   CategoryId: Yup.number(),
 });
 

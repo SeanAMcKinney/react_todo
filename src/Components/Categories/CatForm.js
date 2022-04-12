@@ -17,6 +17,7 @@ export default function CatForm(props) {
         })
     } else {
       const catToEdit = {
+        CategoryId: props.category.CategoryId,
         DepartmentName: values.DepartmentName
       }
       axios.put("http://localhost:56020/api/categories/", catToEdit).then(() => {

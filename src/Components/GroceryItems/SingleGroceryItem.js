@@ -24,7 +24,7 @@ const deleteGroceryItem = (id) => {
   return (
     <div className="singleResource col-md-5 m-2">
 
-      {currentUser === process.env.REACT_APP_EMAIL_ADMIN &&
+      {currentUser.email === process.env.REACT_APP_EMAIL_ADMIN &&
         <div>
           <button id='editLink' onClick={() => setShowEdit(true)}>
             <FontAwesomeIcon icon={['fas', 'edit']} />

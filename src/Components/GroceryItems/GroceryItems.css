@@ -10,9 +10,6 @@ section.resources article.resourceGallery {
         padding: 2em 0 4em;
         width: 100%;
 }
-.section {
-
-}
 
 article.resourceGallery div.singleResource {
     border: 2px solid #ffffff;
@@ -22,7 +19,9 @@ article.resourceGallery div.singleResource {
     height: 15em;
     margin: 0;
     border-radius: 5px;
-    background-color: rgba(200,200,200, .95);    
+    background-color: rgba(200,200,200, .95);  
+    width: 100%;
+    max-height: 15em;
 }
 
 div.singleResource h3 {
@@ -67,15 +66,16 @@ div.singleResource p {
     right: .5em;
     background: none;
     outline: none;
-    border: 2px solid black;
+    border: 2px solid white;
     border-radius: 5px;
     transition: .5s;
+    color: white
 }
 
 button#deleteLink:hover, button#editLink:hover {
-    background-color:rgba(200,200,200, .95);
-    color: rgb(144, 45, 20);
-    border: 1px solid rgb(144, 45, 20);
+    background-color:rgba(200,200,200, .95) !important;
+    color: rgb(144, 45, 20) !important;
+    border: 1px solid rgb(144, 45, 20) !important;
 }
 
 
@@ -86,9 +86,10 @@ button#deleteLink:hover, button#editLink:hover {
     left: .5em;
     background: none;
     outline: none;
-    border: 2px solid black;
+    border: 2px solid white;
     border-radius: 5px;
     transition: .5s;
+    color: white;
 }
 
 article.resourceGallery h2.alert {

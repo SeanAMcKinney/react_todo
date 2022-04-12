@@ -7,13 +7,14 @@ export default function GroceryItemEdit(props) {
     <Modal
         show={props.showEdit}
         onHide={() => props.setShowEdit(false)}>
-            <Modal.Header className='bg-info' closeButton>
-                <h3>editing {props.groceryItem.Name}</h3>
+            <Modal.Header className='text-white' closeButton>
+                <h3>Editing {props.groceryItem.Name}</h3>
             </Modal.Header>
             <Modal.Body>
-                groceryItem={props.groceryItem}
-                setShowEdit={props.setShowEdit}
-                getGroceryItems={props.getGroceryItems} /.
+                <GroceryItemForm
+                    groceryItem={props.groceryItem}
+                    setShowEdit={props.setShowEdit}
+                    getGroceryItems={props.getGroceryItems} />
             </Modal.Body>
         </Modal>
   )
