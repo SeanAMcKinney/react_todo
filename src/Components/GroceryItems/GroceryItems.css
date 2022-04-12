@@ -8,7 +8,8 @@ section.resources {
 }
 section.resources article.resourceGallery {
         padding: 2em 0 4em;
-        width: 100%;
+        width: 70%;
+        margin: 0 auto;
 }
 
 article.resourceGallery div.singleResource {
@@ -135,3 +136,29 @@ div.modal-content {
 div.modal-content button.btn-close {
     opacity: .8;
 }
+
+@media only screen and (max-width: 600px) {
+    
+    section.resources article.resourceGallery {
+        padding: 2em 0 4em;
+        width: 120%;
+        margin: 0 auto;
+}
+
+    div.singleResource h3 {
+        font-size: .8em !important;
+        white-space: pre-wrap;
+    }
+
+    .singleResource button#deleteLink {
+        font-size: .6em !important;
+        margin-top: -1%;
+    }
+
+    .singleResource button#editLink {
+        font-size: .6em !important;
+        margin-top:-1%;
+    }
+}
+
+
