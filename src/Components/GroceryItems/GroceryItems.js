@@ -32,7 +32,7 @@ export default function GroceryItems() {
       </article>
 
       {currentUser.email === process.env.REACT_APP_EMAIL_ADMIN && (
-        <div className="p-2 mb-3 text-center">
+        <div className="p-2 mb-3 text-center gi4">
           <button
             className="btn btn-color btn-outline-light gi1"
             onClick={() => setShowCreate(!showCreate)}

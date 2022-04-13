@@ -73,18 +73,31 @@ div.singleResource p {
     color: white
 }
 
-button#deleteLink:hover, button#editLink:hover {
+button#deleteLink:hover, button#editLink:hover, button#hideItem:hover {
     background-color:rgba(200,200,200, .95) !important;
     color: rgb(144, 45, 20) !important;
     border: 1px solid rgb(144, 45, 20) !important;
 }
 
 
-.singleResource button#editLink {
+.singleResource button#editLink  {
     position: absolute;
     font-size: 1.2em;
     top: .5em;
     left: .5em;
+    background: none;
+    outline: none;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: .5s;
+    color: white;
+}
+
+.singleResource button#hideItem {
+    position: absolute;
+    font-size: 1.2em;
+    top: .5em;
+    left: 2.5em;
     background: none;
     outline: none;
     border: 2px solid white;
@@ -137,13 +150,22 @@ div.modal-content button.btn-close {
     opacity: .8;
 }
 
-@media only screen and (max-width: 600px) {
-    
+div.gi3 {
+    background-color: rgba(7, 90, 15, 0.899) !important;
+}
+
+div.gi5 {
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 950px) {
+
     section.resources article.resourceGallery {
         padding: 2em 0 4em;
-        width: 120%;
-        margin: 0 auto;
-}
+        width: 15em;
+        position: relative;
+        left: -2.5em;
+    }
 
     div.singleResource h3 {
         font-size: .8em !important;
@@ -158,6 +180,12 @@ div.modal-content button.btn-close {
     .singleResource button#editLink {
         font-size: .6em !important;
         margin-top:-1%;
+    }
+
+    .singleResource button#hideItem {
+        font-size: .6em !important;
+        margin-top:-1%;
+        left: 3.5em;
     }
 }
 

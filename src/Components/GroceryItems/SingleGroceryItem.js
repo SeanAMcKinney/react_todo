@@ -21,8 +21,12 @@ const deleteGroceryItem = (id) => {
   }
 }
 
+const hideGrceryItem = (id) => {
+  document.getElementById().this().style.display = 'none';
+}
+
   return (
-    <div className="singleResource col-md-5 m-2">
+    <div className="singleResource col-md-5 m-2 gi5">
 
       {currentUser.email === process.env.REACT_APP_EMAIL_ADMIN &&
         <div className='gi3'>
@@ -31,6 +35,9 @@ const deleteGroceryItem = (id) => {
           </button>
           <button id="deleteLink" onClick={() => deleteGroceryItem(props.groceryItem.GroceryItemId)}>
             <FontAwesomeIcon icon={['fas', 'trash-alt']} />
+          </button>
+          <button id="hideItem" onClick={() => hideGrceryItem(props.groceryItem.GroceryItemId)}>
+          <FontAwesomeIcon icon="fa-solid fa-list-check" />
           </button>
           {showEdit &&
           <GroceryItemEdit
